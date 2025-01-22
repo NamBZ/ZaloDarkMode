@@ -1,3 +1,36 @@
+:root {
+  --zadark-cnv-font-size: inherit;
+  --zadark-font-family: inherit;
+  --zadark-rounded-base: 8px
+}
+
+html[data-zadark-use-font=true] body.dark-mode {
+  font-family: "Open Sans", sans-serif
+}
+
+html[data-theme-mode=light]:root {
+  --icon-count-noti-enable-bg: var(--R50);
+  --popper-shadow: var(--BA50) 0px 0px 0px 5000px;
+  --prv-sticker-filter: invert(0.5) brightness(2);
+  --zadark-custom-leftmenu-text: #7589a3;
+  --zadark-custom-leftmenu-text-hover: #005ae0;
+  --layer-background-leftmenu: #fff;
+  --layer-background-leftmenu-hover: #e5efff;
+  --layer-background-leftmenu-selected: #e5efff;
+  --layer-background-navbar-normal: #fff;
+  --layer-background-navbar-hover: #e5efff;
+  --layer-background-navbar-selected: #e5efff
+}
+
+html[data-theme-mode=light] .dark-mode #main-tab {
+  border-right: 1px solid var(--border)
+}
+
+html[data-theme-mode=light] .dark-mode .tds-banner-download__container {
+  background-color: var(--NG10);
+  border-bottom: 1px solid var(--border)
+}
+
 html[data-theme-mode=dark]:root {
   --N10: #2c2e2f;
   --N15: #2c2e2f;
@@ -44,6 +77,9 @@ html[data-theme-mode=dark]:root {
   --B90: #72abff;
   --B95: #72abff;
   --B100: #72abff;
+  --B50-alpha-10: rgba(0, 104, 255, 0.1);
+  --B50-alpha-20: rgba(0, 104, 255, 0.2);
+  --B50-alpha-30: rgba(0, 104, 255, 0.3);
   --STB10: #25374b;
   --STB15: #25374b;
   --STB20: #31465e;
@@ -89,6 +125,9 @@ html[data-theme-mode=dark]:root {
   --R90: #f5222d;
   --R95: #f5222d;
   --R100: #f5222d;
+  --R50-alpha-10: rgba(245, 34, 45, 0.1);
+  --R50-alpha-20: rgba(245, 34, 45, 0.2);
+  --R50-alpha-30: rgba(245, 34, 45, 0.3);
   --OR10: #612500;
   --OR15: #612500;
   --OR20: #873800;
@@ -255,10 +294,10 @@ html[data-theme-mode=dark]:root {
   --tab-txt: var(--N80);
   --tip-bg: var(--B50);
   --surface-background: var(--NG20);
-  --surface-background-subtle: var(--NG15);
+  --surface-background-subtle: #18191a;
   --surface-alt: var(--WA100);
   --layer-background: var(--WA100);
-  --layer-background-subtle: var(--N10);
+  --layer-background-subtle: #18191a;
   --layer-background-hover: var(--NG10);
   --layer-background-disabled: var(--NG25);
   --layer-background-selected: var(--NG10);
@@ -267,32 +306,40 @@ html[data-theme-mode=dark]:root {
   --layer-background-leftmenu: #2d3031;
   --layer-background-leftmenu-hover: #3a3d3e;
   --layer-background-leftmenu-selected: #3a3d3e;
+  --layer-background-navbar-normal: #2d3031;
+  --layer-background-navbar-hover: #3a3d3e;
+  --layer-background-navbar-selected: #3a3d3e;
+  --layer-background-navbar-sublevel-normal: #2d3031;
+  --layer-background-navbar-sublevel-hover: #3a3d3e;
+  --layer-background-navbar-sublevel-selected: #3a3d3e;
   --layer-alert-background: var(--R60);
   --layer-error-background: var(--R10);
   --layer-success-background: var(--G10);
   --layer-warning-background: var(--Y10);
   --layer-information-background: var(--B10);
+  --layer-neutral-information-background: #303233;
   --text-primary: #e5e5e5;
   --text-primary-50: rgba(229, 229, 229, 0.5);
   --text-secondary: var(--N80);
   --text-placeholder: var(--N80);
   --text-disabled: var(--N60);
   --text-on-disabled-color: var(--N70);
-  --text-on-color: var(--WA100);
+  --text-on-color: #fff;
   --text-errors: var(--R55);
   --text-success: var(--G60);
   --text-warning: var(--OR60);
   --text-information: var(--B60);
+  --text-mention: var(--B60);
   --icon-primary: var(--N80);
   --icon-secondary: var(--N60);
   --icon-disabled: var(--N60);
   --icon-on-disabled-color: var(--N70);
-  --icon-on-color: var(--WA100);
+  --icon-on-color: #fff;
   --icon-errors: var(--R55);
   --icon-success: var(--G60);
   --icon-warning: var(--OR60);
   --icon-information: var(--B60);
-  --icon-count-noti-enable-bg: var(--B60);
+  --icon-count-noti-enable-bg: var(--R60);
   --icon-count-noti-disable-bg: var(--N60);
   --border: var(--NG30);
   --border-subtle: var(--NG25);
@@ -306,10 +353,7 @@ html[data-theme-mode=dark]:root {
   --border-information: var(--B55);
   --divider: var(--NG30);
   --divider-subtle: var(--NG25);
-  --divider-bold: var(--NG40);
-  --curtain: var(--NG30);
-  --curtain-subtle: var(--BA30);
-  --curtain-bold: var(--BA70);
+  --divider-bold: var(--NG30);
   --skeleton: var(--NG20);
   --skeleton-subtle: var(--NG15);
   --background-inactiveness: var(--WA100);
@@ -326,6 +370,10 @@ html[data-theme-mode=dark]:root {
   --field-bg-filled-hover: var(--N30);
   --field-bg-outline: var(--WA100);
   --field-bg-outline-hover: var(--N10);
+  --input-field-bg-filled: var(--NG20);
+  --input-field-bg-filled-hover: var(--NG20);
+  --input-field-bg-outline: var(--bg-default);
+  --input-field-bg-outline-hover: var(--bg-default);
   --blue-message: #353e4b;
   --blue-message-selected: #1f252f;
   --blue-message-selected-border: #4b5767;
@@ -355,61 +403,117 @@ html[data-theme-mode=dark]:root {
   --white-link: var(--B60);
   --white-file-progress-track: #4b5767;
   --admin-message-border: var(--N40);
+  --bg-message-info: var(--WA100);
+  --accent-grey-bg-subtle: var(--N10);
+  --accent-grey-bg: var(--N20);
+  --accent-grey-bg-bold: var(--N30);
+  --floating-menu: var(--N10);
+  --jump-to-message: var(--blue-message-selected);
   --button-primary-normal: var(--B55);
   --button-primary-hover: var(--B60);
   --button-primary-pressed: var(--B80);
-  --button-primary-disabled: var(--B25);
+  --button-primary-disabled: var(--B50-alpha-10);
   --button-primary-text: #fff;
-  --button-primary-text-disabled: var(--WA65);
-  --button-secondary-normal: var(--B15);
-  --button-secondary-hover: var(--B20);
-  --button-secondary-pressed: var(--B25);
-  --button-secondary-disabled: var(--B15);
-  --button-secondary-text: var(--B55);
-  --button-secondary-text-disabled: var(--B25);
+  --button-primary-text-disabled: var(--B40);
+  --button-primary-focus-bg: var(--B60);
+  --button-primary-focus-text: #fff;
+  --button-secondary-normal: var(--B50-alpha-10);
+  --button-secondary-hover: var(--B50-alpha-20);
+  --button-secondary-pressed: var(--B50-alpha-30);
+  --button-secondary-disabled: var(--B50-alpha-10);
+  --button-secondary-text: var(--B50);
+  --button-secondary-text-disabled: var(--B40);
+  --button-secondary-focus-bg: var(--B50-alpha-20);
+  --button-secondary-focus-text: var(--B50);
+  --button-primary-tonal-normal: var(--B50-alpha-10);
+  --button-primary-tonal-hover: var(--B50-alpha-20);
+  --button-primary-tonal-pressed: var(--B50-alpha-30);
+  --button-primary-tonal-disabled: var(--B50-alpha-10);
+  --button-primary-tonal-text: var(--B50);
+  --button-primary-tonal-text-disabled: var(--B40);
   --button-danger-normal: var(--R60);
   --button-danger-hover: var(--R70);
   --button-danger-pressed: var(--R80);
   --button-danger-disabled: var(--R25);
   --button-danger-text: #fff;
   --button-danger-text-disabled: var(--WA65);
-  --button-secondary-danger-normal: var(--R15);
-  --button-secondary-danger-hover: var(--R20);
-  --button-secondary-danger-pressed: var(--R25);
-  --button-secondary-danger-disabled: var(--R15);
-  --button-secondary-danger-text: var(--R60);
-  --button-secondary-danger-text-disabled: var(--R25);
+  --button-danger-focus-bg: var(--R70);
+  --button-danger-focus-text: #fff;
+  --button-secondary-danger-normal: var(--R50-alpha-10);
+  --button-secondary-danger-hover: var(--R50-alpha-20);
+  --button-secondary-danger-pressed: var(--R50-alpha-30);
+  --button-secondary-danger-disabled: var(--R50-alpha-10);
+  --button-secondary-danger-text: var(--R50);
+  --button-secondary-danger-text-disabled: var(--R40);
+  --button-secondary-danger-focus-bg: var(--R50-alpha-20);
+  --button-secondary-danger-focus-text: var(--R50);
+  --button-danger-tonal-normal: var(--R50-alpha-10);
+  --button-danger-tonal-hover: var(--R50-alpha-20);
+  --button-danger-tonal-pressed: var(--R50-alpha-30);
+  --button-danger-tonal-disabled: var(--R50-alpha-10);
+  --button-danger-tonal-text: var(--R50);
+  --button-danger-tonal-text-disabled: var(--R50);
   --button-neutral-normal: var(--N20);
   --button-neutral-hover: var(--N30);
   --button-neutral-pressed: var(--N50);
   --button-neutral-disabled: var(--N20);
   --button-neutral-text: var(--N300);
   --button-neutral-text-disabled: var(--N60);
+  --button-neutral-focus-bg: var(--N30);
+  --button-neutral-focus-text: var(--N300);
+  --button-secondary-neutral-normal: var(--N20);
+  --button-secondary-neutral-hover: var(--N30);
+  --button-secondary-neutral-pressed: var(--N50);
+  --button-secondary-neutral-disabled: var(--N20);
+  --button-secondary-neutral-text: var(--N300);
+  --button-secondary-neutral-text-disabled: var(--N60);
+  --button-secondary-neutral-focus-bg: var(--N30);
+  --button-secondary-neutral-focus-text: var(--N300);
   --button-tertiary-primary-normal: transparent;
   --button-tertiary-primary-hover: var(--B15);
   --button-tertiary-primary-pressed: var(--B25);
   --button-tertiary-primary-disabled: transparent;
   --button-tertiary-primary-text: var(--B55);
   --button-tertiary-primary-text-disabled: var(--B40);
+  --button-tertiary-primary-focus-bg: var(--B15);
+  --button-tertiary-primary-focus-text: var(--B55);
   --button-tertiary-danger-normal: transparent;
   --button-tertiary-danger-hover: var(--R15);
   --button-tertiary-danger-pressed: var(--R25);
   --button-tertiary-danger-disabled: transparent;
   --button-tertiary-danger-text: var(--R60);
   --button-tertiary-danger-text-disabled: var(--R25);
+  --button-tertiary-danger-focus-bg: var(--R15);
+  --button-tertiary-danger-focus-text: var(--R60);
   --button-tertiary-neutral-normal: transparent;
   --button-tertiary-neutral-hover: var(--N25);
+  --button-tertiary-neutral-pressed: var(--N25);
   --button-tertiary-neutral-disabled: transparent;
   --button-tertiary-neutral-focus: var(--B15);
   --button-tertiary-neutral-text: var(--N300);
   --button-tertiary-neutral-text-disabled: var(--N60);
-  --button-tertiary-neutral-text-focus: var(--B55);
+  --button-tertiary-neutral-focus-bg: var(--B50-alpha-10);
+  --button-tertiary-neutral-focus-text: var(--B55);
   --brand-primary: #0068ff;
   --message-view-gradient: linear-gradient(to top, #141414, #18191a);
   --scrollbar: var(--NG40);
-  --scrollbar-opacity: 0.5;
+  --scrollbar-opacity: 0.25;
   --selection: #0068ff;
-  --selection-text: #fff
+  --selection-text: #fff;
+  --popper-shadow: 0px 0px 12px var(--BA50);
+  --black: 900;
+  --extrabold: 800;
+  --bold: 600;
+  --semibold: 500;
+  --medium: 500;
+  --regular: 400;
+  --thin: 300;
+  --light: 200;
+  --tab-inactive: var(--text-secondary);
+  --tab-active: var(--text-primary);
+  --prv-sticker-filter: invert(0.5);
+  --zadark-custom-leftmenu-text: var(--N80);
+  --zadark-custom-leftmenu-text-hover: var(--text-primary)
 }
 
 html[data-theme-mode=dark] div::-webkit-scrollbar-thumb {
@@ -433,9 +537,13 @@ html[data-theme-mode=dark] .dark-mode {
   -webkit-font-smoothing: auto
 }
 
+html[data-theme-mode=dark] .dark-mode .title-name {
+  opacity: 1
+}
+
 html[data-theme-mode=dark] .dark-mode .title-name.unfocus {
-  color: var(--text-primary);
-  opacity: .5
+  opacity: 1;
+  color: var(--text-secondary)
 }
 
 html[data-theme-mode=dark] .dark-mode #main-tab {
@@ -464,11 +572,6 @@ html[data-theme-mode=dark] .dark-mode .app-info__section {
   padding: 16px
 }
 
-html[data-theme-mode=dark] .dark-mode .message-view__blur__overlay,
-html[data-theme-mode=dark] .dark-mode .message-view__blur__overlay_noavatar {
-  background: var(--message-view-gradient)
-}
-
 html[data-theme-mode=dark] .dark-mode .media-tabs__main {
   border-bottom-color: var(--border)
 }
@@ -476,6 +579,16 @@ html[data-theme-mode=dark] .dark-mode .media-tabs__main {
 html[data-theme-mode=dark] .dark-mode .media-tabs__main.active {
   background-color: var(--WA100);
   border-color: rgba(0, 0, 0, 0) var(--border)
+}
+
+html[data-theme-mode=dark] .dark-mode .media-tabs {
+  margin-top: 10px;
+  color: var(--text-secondary)
+}
+
+html[data-theme-mode=dark] .dark-mode .media-tabs.active {
+  color: var(--tab-active);
+  border-color: var(--tab-active)
 }
 
 html[data-theme-mode=dark] .dark-mode .emoji-tabs {
@@ -487,24 +600,9 @@ html[data-theme-mode=dark] .dark-mode .z--btn--text--tertiary.--activated:hover:
 }
 
 html[data-theme-mode=dark] .dark-mode .reaction-emoji-list {
-  color: var(--WA70);
-  border: .5px solid var(--NG30)
-}
-
-html[data-theme-mode=dark] .dark-mode .leftbar-tab {
-  color: var(--text-primary);
-  -webkit-transition: all 250ms ease-in-out;
-  -moz-transition: all 250ms ease-in-out;
-  -o-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out
-}
-
-html[data-theme-mode=dark] .dark-mode .leftbar-tab:hover {
-  background-color: var(--layer-background-leftmenu-hover)
-}
-
-html[data-theme-mode=dark] .dark-mode .leftbar-unread {
-  color: #fff !important
+  color: rgba(69, 69, 69, .7);
+  border: .5px solid #3d3f40;
+  background-color: #232526
 }
 
 html[data-theme-mode=dark] .dark-mode .user-status-footer .footer-text {
@@ -540,16 +638,24 @@ html[data-theme-mode=dark] .dark-mode .friend-center-main.subtract-title {
   height: 100vh
 }
 
+html[data-theme-mode=dark] .dark-mode .chat-onboard {
+  background: var(--message-view-gradient)
+}
+
 html[data-theme-mode=dark] .dark-mode .chips--choice.--active {
   color: #fff
 }
 
 html[data-theme-mode=dark] .dark-mode .chat-date {
-  color: var(--N300)
+  color: var(--text-secondary)
 }
 
 html[data-theme-mode=dark] .dark-mode .chat-date>span {
-  background: var(--WA50)
+  background: var(--WA100)
+}
+
+html[data-theme-mode=dark] .dark-mode .chat-date .line {
+  border-top: 1px solid var(--NG10)
 }
 
 html[data-theme-mode=dark] .dark-mode #contact-search-input {
@@ -566,24 +672,23 @@ html[data-theme-mode=dark] .dark-mode .input {
   background-color: var(--WA100)
 }
 
-html[data-theme-mode=dark] .dark-mode .chat-input__content.highlight {
+html[data-theme-mode=dark] .dark-mode .chat-input__content.highlight,
+html[data-theme-mode=dark] .dark-mode .chat-box-input.highlight-v3,
+html[data-theme-mode=dark] .dark-mode .chat-box-input.highlight-v4,
+html[data-theme-mode=dark] .dark-mode .chat-box-input--audit-2023.highlight-v3,
+html[data-theme-mode=dark] .dark-mode .chat-box-input--audit-2023.highlight-v4 {
   border-color: var(--NG30)
 }
 
 html[data-theme-mode=dark] .dark-mode .chat-input__content__input .quote-banner {
-  height: 40px;
-  margin: 12px 16px 0;
-  background-color: var(--NG10)
+  background-color: var(--white-quote)
 }
 
 html[data-theme-mode=dark] .dark-mode .chat-message .extra-btn {
   padding: 6px 16px;
   background-color: var(--WA100);
   color: var(--text-primary);
-  -webkit-transition: all 250ms ease-in-out;
-  -moz-transition: all 250ms ease-in-out;
-  -o-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out
+  transition: background-color 100ms ease-in-out
 }
 
 html[data-theme-mode=dark] .dark-mode .chat-message .extra-btn:hover {
@@ -634,6 +739,23 @@ html[data-theme-mode=dark] .dark-mode .chat-message.highlighted .card:not(.card-
   background: var(--blue-message-selected)
 }
 
+html[data-theme-mode=dark] .dark-mode .chat-message.highlighted {
+  --G20: var(--blue-message-selected);
+  --G30: var(--blue-message-selected)
+}
+
+html[data-theme-mode=dark] .dark-mode .chat-message.highlighted .text-match {
+  background-color: var(--selection)
+}
+
+html[data-theme-mode=dark] .dark-mode .img-msg-v2:not(.-caption).-highlight {
+  background-color: rgba(0, 0, 0, 0)
+}
+
+html[data-theme-mode=dark] .dark-mode .img-msg-v2.-caption.-highlight>.img-msg-v2__bub>.img-msg-v2__ft {
+  background-color: var(--blue-message-selected)
+}
+
 html[data-theme-mode=dark] .dark-mode .sticker-selector__menu {
   height: 48px
 }
@@ -647,13 +769,29 @@ html[data-theme-mode=dark] .dark-mode .media-dock-tabs:not(.docked) {
   border-bottom: 0
 }
 
+html[data-theme-mode=dark] .dark-mode .media-dock-tabs:not(.docked) .media-span-button[data-translate-title=STR_MEDIA_EXPAND] {
+  width: auto;
+  height: 22px;
+  border-left: 1px solid var(--border);
+  margin-right: 0;
+  padding-left: 16px
+}
+
+html[data-theme-mode=dark] .dark-mode .media-dock-tabs:not(.docked) .media-span-button[data-translate-title=STR_MEDIA_EXPAND] .fa-icon-expand {
+  color: var(--text-secondary)
+}
+
+html[data-theme-mode=dark] .dark-mode .media-dock-tabs .back-icon {
+  color: var(--text-secondary)
+}
+
 html[data-theme-mode=dark] .dark-mode .gradient-border.left .fa-sendtome-image,
 html[data-theme-mode=dark] .dark-mode .gradient-border.right .message-view__guide__item__sign .fa-sendtome-image {
   color: #fff
 }
 
 html[data-theme-mode=dark] .dark-mode .message-view__guide__item__sign {
-  color: var(--N300)
+  color: var(--text-primary)
 }
 
 html[data-theme-mode=dark] .dark-mode .card-send-time {
@@ -680,6 +818,10 @@ html[data-theme-mode=dark] .dark-mode .reacts-list,
 html[data-theme-mode=dark] .dark-mode .msg-reaction-icon {
   border: 1px solid var(--white-message-action-border);
   background-color: var(--white-message-action)
+}
+
+html[data-theme-mode=dark] .dark-mode .msg-reaction-icon .default-react-icon-thumb {
+  filter: brightness(2)
 }
 
 html[data-theme-mode=dark] .dark-mode .td-msg-btn {
@@ -795,14 +937,22 @@ html[data-theme-mode=dark] .dark-mode .bubble-contact-card-container>.me.bubble-
   border-color: var(--blue-message-border)
 }
 
+html[data-theme-mode=dark] .dark-mode .bubble-contact-card-container>.me.bubble-contact-card>.footer>.footer__left.has--right {
+  border-right: 1px solid var(--blue-message-border)
+}
+
+html[data-theme-mode=dark] .dark-mode .bubble-contact-card-container>.bubble-contact-card>.footer {
+  border-top: 1px solid var(--border)
+}
+
+html[data-theme-mode=dark] .dark-mode .bubble-contact-card-container>.bubble-contact-card>.footer>.footer__left.has--right {
+  border-right: 1px solid var(--border)
+}
+
 html[data-theme-mode=dark] .dark-mode .message-reaction-container.me .reacts-list,
 html[data-theme-mode=dark] .dark-mode .message-reaction-container.me .msg-reaction-icon {
   border-color: var(--blue-message-action-border);
   background-color: var(--blue-message-action)
-}
-
-html[data-theme-mode=dark] .dark-mode .message-reaction-container.me .msg-reaction-icon .default-react-icon-thumb {
-  filter: brightness(2)
 }
 
 html[data-theme-mode=dark] .dark-mode .tipv2-content {
@@ -821,15 +971,24 @@ html[data-theme-mode=dark] .dark-mode .qri {
   background-color: var(--WA100)
 }
 
-html[data-theme-mode=dark] .dark-mode .conv-action__unread .conv-unread {
+html[data-theme-mode=dark] .dark-mode .qri.active,
+html[data-theme-mode=dark] .dark-mode .qri.hover:hover {
+  background-color: var(--layer-background-hover);
+  cursor: pointer
+}
+
+html[data-theme-mode=dark] .dark-mode .qri__left>.qri__keyword {
+  background-color: var(--button-tertiary-primary-text);
+  color: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .conv-action__unread .conv-unread,
+html[data-theme-mode=dark] .dark-mode .conv-action__unread-v2 .conv-unread {
   color: #fff !important
 }
 
 html[data-theme-mode=dark] .dark-mode .conv-item {
-  -webkit-transition: all 250ms ease-in-out;
-  -moz-transition: all 250ms ease-in-out;
-  -o-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out
+  transition: background-color 100ms ease-in-out
 }
 
 html[data-theme-mode=dark] .dark-mode .conv-item .conv-message.progress-bar .progress-track {
@@ -837,7 +996,7 @@ html[data-theme-mode=dark] .dark-mode .conv-item .conv-message.progress-bar .pro
 }
 
 html[data-theme-mode=dark] .dark-mode .conv-item.pinned {
-  background-color: initial
+  background-color: var(--WA15)
 }
 
 html[data-theme-mode=dark] .dark-mode .conv-item.pinned.selected {
@@ -985,18 +1144,23 @@ html[data-theme-mode=dark] .dark-mode .pin-input-hidden-chat__contain_text {
   color: var(--neutral-500) !important
 }
 
-html[data-theme-mode=dark] .dark-mode .zl-avatar {
+html[data-theme-mode=dark] .dark-mode .zavatar {
   --WA100: #fff;
-  --NG50: #000;
-  box-shadow: 0 0 0 1px var(--bg-default)
+  --NG50: #000
 }
 
-html[data-theme-mode=dark] .dark-mode .zl-avatar__badge {
-  --WA100: #232526
+html[data-theme-mode=dark] .dark-mode .zavatar .a-child {
+  border-color: var(--bg-default)
 }
 
-html[data-theme-mode=dark] .dark-mode .chat-date .line {
-  border-top: 1px solid var(--NG10)
+html[data-theme-mode=dark] .dark-mode .zavatar-online {
+  --width: 14px;
+  width: var(--width);
+  height: var(--width);
+  min-width: var(--width);
+  min-height: var(--width);
+  right: 0;
+  bottom: 0
 }
 
 html[data-theme-mode=dark] .dark-mode .zavi-clock__date,
@@ -1028,54 +1192,26 @@ html[data-theme-mode=dark] .dark-mode .contact-list.web {
   height: calc(100% - 71px)
 }
 
-html[data-theme-mode=dark] .dark-mode .image-show__title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 32px;
-  color: var(--text-primary)
+html[data-theme-mode=dark] .dark-mode .media-viewer {
+  --WA80: hsla(0, 0%, 100%, 0.8);
+  --WA100: #fff;
+  --NG85: #2e2e2e;
+  --NG90: #1f1f1f;
+  --NG95: #141414;
+  --text-on-color: #fff;
+  --icon-on-color: #fff
 }
 
-html[data-theme-mode=dark] .dark-mode .image-show__title>.fl-l {
-  margin: 3px 10px 3px 0px !important
+html[data-theme-mode=dark] .dark-mode .media-viewer .msg-reaction-icon {
+  background: #3d3f40
 }
 
-html[data-theme-mode=dark] .dark-mode .image-show__bottom__sender__info {
-  color: var(--text-primary)
+html[data-theme-mode=dark] .dark-mode .media-viewer .media-viewer__body__right .sliderTime.-inactive {
+  color: #7b7c7d
 }
 
-html[data-theme-mode=dark] .dark-mode .image-show__bottom__ctrl>.btn,
-html[data-theme-mode=dark] .dark-mode .image-show__bottom__ctrl>a>.btn {
-  color: var(--text-primary)
-}
-
-html[data-theme-mode=dark] .dark-mode .image-show__icon-fullscreen {
-  color: var(--text-primary)
-}
-
-html[data-theme-mode=dark] .dark-mode .image-show .image-show__reaction .msg-reaction-icon {
-  background: var(--text-primary)
-}
-
-html[data-theme-mode=dark] .dark-mode .image-show__thumb__legend {
-  color: var(--text-primary)
-}
-
-html[data-theme-mode=dark] .dark-mode .timeline-slider__handle {
-  background: var(--text-primary)
-}
-
-html[data-theme-mode=dark] .dark-mode .image-show__close>.fa-close,
-html[data-theme-mode=dark] .dark-mode .image-show__close>.quote-base__close-icon {
-  color: var(--text-primary)
-}
-
-html[data-theme-mode=dark] .dark-mode .image-show__thumb-container .btn-play {
-  color: var(--text-primary)
-}
-
-html[data-theme-mode=dark] .dark-mode .image-show__caption {
-  color: var(--text-primary)
+html[data-theme-mode=dark] .dark-mode .friend-profile__addfriend {
+  background-color: var(--WA100) !important
 }
 
 html[data-theme-mode=dark] .dark-mode .friend-profile__addfriend__msg {
@@ -1116,6 +1252,7 @@ html[data-theme-mode=dark] .dark-mode .app-lock__main__input input {
   height: 40px;
   padding: 0px 16px;
   border-right: 0;
+  background: var(--field-bg-filled);
   color: var(--text-primary)
 }
 
@@ -1127,7 +1264,24 @@ html[data-theme-mode=dark] .dark-mode .app-lock__main__input a {
   padding: 0px 16px;
   border: 1px solid var(--B60);
   background: var(--button-primary-normal);
-  color: var(--text-primary)
+  color: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .app-lock__main .username {
+  font-size: 1.25rem;
+  font-weight: var(--medium)
+}
+
+html[data-theme-mode=dark] .dark-mode .app-lock__logout {
+  padding-bottom: 32px
+}
+
+html[data-theme-mode=dark] .dark-mode .app-lock__logout a {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-decoration: none
 }
 
 html[data-theme-mode=dark] .dark-mode .chat-input__img-preview__thumb__title {
@@ -1144,8 +1298,8 @@ html[data-theme-mode=dark] .dark-mode .file-icon__ext-text {
   color: #fff
 }
 
-html[data-theme-mode=dark] .dark-mode .z-toggle>div {
-  background: #fff
+html[data-theme-mode=dark] .dark-mode .z-toggle {
+  --layer-background: var(--text-primary)
 }
 
 html[data-theme-mode=dark] .dark-mode .todo-filter-input {
@@ -1177,19 +1331,20 @@ html[data-theme-mode=dark] .dark-mode .user-profile-button.rg {
   color: #fff
 }
 
-html[data-theme-mode=dark] .dark-mode #chatOnboard .slideshow__page__image {
-  padding: 16px;
-  background-color: #fff !important;
-  border-radius: 64px 8px 64px 8px;
-  filter: invert(0.9)
+html[data-theme-mode=dark] .dark-mode #chatOnboard .slideshow__page__text__title .title-rtf__text {
+  color: var(--text-primary)
 }
 
-html[data-theme-mode=dark] .dark-mode #chatOnboard .slideshow__page__text__title {
-  margin-top: 50px
+html[data-theme-mode=dark] .dark-mode #chatOnboard .slideshow__page__text .subtitle-rtf {
+  color: var(--text-secondary)
 }
 
-html[data-theme-mode=dark] .dark-mode #chatOnboard .slideshow__bottom {
-  margin-top: 50px
+html[data-theme-mode=dark] .dark-mode #chatOnboard .slideshow__btn {
+  color: var(--text-secondary)
+}
+
+html[data-theme-mode=dark] .dark-mode #chatOnboard .slideshow__bottom__dot.selected {
+  background-color: var(--NG40)
 }
 
 html[data-theme-mode=dark] .dark-mode .cb-info-file-item__actions-container {
@@ -1236,11 +1391,6 @@ html[data-theme-mode=dark] .dark-mode .item-catalog.selected {
 
 html[data-theme-mode=dark] .dark-mode .catalog-main-view__item_product.action {
   background: var(--layer-background-selected)
-}
-
-html[data-theme-mode=dark] .dark-mode .zl-modal {
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px)
 }
 
 html[data-theme-mode=dark] .dark-mode #filter-tags-sb .filter-tag-item.--activated {
@@ -1312,23 +1462,23 @@ html[data-theme-mode=dark] .dark-mode .z-tooltip {
 html[data-theme-mode=dark] .dark-mode .z-tooltip[main-plm*=top] .z-tooltip__arrow:before {
   border-left: 6px solid rgba(0, 0, 0, 0);
   border-right: 6px solid rgba(0, 0, 0, 0);
-  border-top: 6px solid var(--NG30)
+  border-top: 6px solid var(--NG10)
 }
 
 html[data-theme-mode=dark] .dark-mode .z-tooltip[main-plm*=bottom] .z-tooltip__arrow:before {
   border-left: 6px solid rgba(0, 0, 0, 0);
   border-right: 6px solid rgba(0, 0, 0, 0);
-  border-bottom: 6px solid var(--NG30)
+  border-bottom: 6px solid var(--NG10)
 }
 
 html[data-theme-mode=dark] .dark-mode .z-tooltip[main-plm*=left] .z-tooltip__arrow:before {
-  border-left: 6px solid var(--NG30);
+  border-left: 6px solid var(--NG10);
   border-top: 6px solid rgba(0, 0, 0, 0);
   border-bottom: 6px solid rgba(0, 0, 0, 0)
 }
 
 html[data-theme-mode=dark] .dark-mode .z-tooltip[main-plm*=right] .z-tooltip__arrow:before {
-  border-right: 6px solid var(--NG30);
+  border-right: 6px solid var(--NG10);
   border-top: 6px solid rgba(0, 0, 0, 0);
   border-bottom: 6px solid rgba(0, 0, 0, 0)
 }
@@ -1426,21 +1576,420 @@ html[data-theme-mode=dark] .dark-mode .reminder-info-v2>.content>.cal>.wd-time>.
 }
 
 html[data-theme-mode=dark] .dark-mode .sticker-store-btn {
-  color: var(--B50)
+  color: var(--text-secondary)
 }
 
 html[data-theme-mode=dark] .dark-mode .sticker-store-btn:hover {
+  color: var(--text-information)
+}
+
+html[data-theme-mode=dark] .dark-mode .tds-banner-download__container {
+  background-color: var(--N20);
+  border-bottom: 1px solid var(--N30);
+  max-height: 32px
+}
+
+html[data-theme-mode=dark] .dark-mode .tds-banner-download__action-button-wrapper {
   color: var(--B60)
 }
 
-body.dark-mode {
-  font-family: "Open Sans", sans-serif
+html[data-theme-mode=dark] .dark-mode .quote-line {
+  width: 4px;
+  min-width: 4px;
+  border-radius: 2px
+}
+
+html[data-theme-mode=dark] .dark-mode .setting-menu__item,
+html[data-theme-mode=dark] .dark-mode .zmenu-item {
+  transition: background-color 100ms ease-in-out
+}
+
+html[data-theme-mode=dark] .dark-mode .setting-menu__item.chat-message.first-selected,
+html[data-theme-mode=dark] .dark-mode .setting-menu__item.chat-message.last-selected,
+html[data-theme-mode=dark] .dark-mode .setting-menu__item.selected {
+  background-color: var(--NG30)
+}
+
+html[data-theme-mode=dark] .dark-mode .message-view__guide,
+html[data-theme-mode=dark] .dark-mode .tds-bubble-info-ecard__container {
+  background-color: var(--white-message)
+}
+
+html[data-theme-mode=dark] .dark-mode .event-message>div,
+html[data-theme-mode=dark] .dark-mode .onboard-message>div {
+  background: var(--white-message)
+}
+
+html[data-theme-mode=dark] .dark-mode .e2ee-event-info {
+  background-color: var(--white-message) !important
+}
+
+html[data-theme-mode=dark] .dark-mode .conv--unreadMark {
+  font-size: .5rem;
+  width: .5rem;
+  height: .5rem
+}
+
+html[data-theme-mode=dark] .dark-mode .disk-usage-chart>.another-app-usage {
+  background: var(--N30)
+}
+
+html[data-theme-mode=dark] .dark-mode .disk-usage-desc-another {
+  background: var(--N30)
+}
+
+html[data-theme-mode=dark] .dark-mode .setting-section:has(>.setting-section-content__theme) {
+  display: none
+}
+
+html[data-theme-mode=dark] .dark-mode .main-title-container .lock-icon {
+  color: var(--text-secondary)
+}
+
+html[data-theme-mode=dark] .dark-mode .sticker-sorter__body__item {
+  background-color: var(--layer-background) !important;
+  transition: background-color 100ms ease-in-out
+}
+
+html[data-theme-mode=dark] .dark-mode .sticker-sorter__body__item:hover {
+  background-color: var(--layer-background-hover) !important
+}
+
+html[data-theme-mode=dark] .dark-mode .tab-main .tab-item.chat-message.first-selected,
+html[data-theme-mode=dark] .dark-mode .tab-main .tab-item.chat-message.last-selected,
+html[data-theme-mode=dark] .dark-mode .tab-main .tab-item.selected,
+html[data-theme-mode=dark] .dark-mode .tab-main .tab-item:hover {
+  color: var(--tab-active)
+}
+
+html[data-theme-mode=dark] .dark-mode .tab-main .tab-indicator {
+  background: var(--tab-active)
+}
+
+html[data-theme-mode=dark] .dark-mode #contact-search-input {
+  border-radius: var(--zadark-rounded-base);
+  border-color: var(--border)
+}
+
+html[data-theme-mode=dark] .dark-mode #contact-search-input:focus {
+  border-color: var(--border-focused)
+}
+
+html[data-theme-mode=dark] .dark-mode .file-progress-row__end-text,
+html[data-theme-mode=dark] .dark-mode .file-progress-row__start-text {
+  color: var(--text-secondary)
+}
+
+html[data-theme-mode=dark] .dark-mode .file-cloud-indicator[style*="assets/on-cloud"],
+html[data-theme-mode=dark] .dark-mode .file-message__content-info-tick-icon[style*="assets/on-cloud"] {
+  filter: brightness(2.4)
+}
+
+html[data-theme-mode=dark] .dark-mode span[data-translate-inner=STR_CLOUD_SAVED][style*="rgb(0, 55, 138)"],
+html[data-theme-mode=dark] .dark-mode span[data-translate-inner=STR_PERSONAL_CLOUDED][style*="rgb(0, 55, 138)"] {
+  color: var(--B60) !important
+}
+
+html[data-theme-mode=dark] .dark-mode .tab-bar-item {
+  color: var(--tab-inactive)
+}
+
+html[data-theme-mode=dark] .dark-mode .tab-bar-item.active {
+  border-color: var(--tab-active)
+}
+
+html[data-theme-mode=dark] .dark-mode .tab-bar-item.active.highlight>.tab-bar-item__content {
+  color: var(--tab-active)
+}
+
+html[data-theme-mode=dark] .dark-mode .tab-bar-item.active>.tab-bar-item__content {
+  padding: 0
+}
+
+html[data-theme-mode=dark] .dark-mode .tab-bar-item__content {
+  padding: 0
+}
+
+html[data-theme-mode=dark] .dark-mode .gb-menu-multi-select {
+  top: 21px
+}
+
+html[data-theme-mode=dark] .dark-mode .chat-info__header__title [data-id=btn_MutualGrp_Back] {
+  position: relative;
+  top: -3px
+}
+
+html[data-theme-mode=dark] .dark-mode .group-board-sidebar-title>.gbsb-ic-add {
+  top: 24px
+}
+
+html[data-theme-mode=dark] .dark-mode .sound-container__play {
+  color: #fff !important
+}
+
+html[data-theme-mode=dark] .dark-mode .sticker-download-button {
+  filter: invert(0.8)
+}
+
+html[data-theme-mode=dark] .dark-mode #text-color-indicator[style*="rgb(5, 10, 25)"],
+html[data-theme-mode=dark] .dark-mode .rtf-text-color-indicator[style*="rgb(5, 10, 25)"],
+html[data-theme-mode=dark] .dark-mode .text-color-menu-container .text-color-menu[style*="rgb(5, 10, 25)"] {
+  background-color: var(--text-primary) !important
+}
+
+html[data-theme-mode=dark] .dark-mode .bubble-message-status {
+  padding: 0 8px 0 6px;
+  background-color: var(--NG10);
+  color: var(--text-secondary)
+}
+
+html[data-theme-mode=dark] .dark-mode .bubble-message-time {
+  padding: 0 8px;
+  background-color: var(--NG10);
+  color: var(--text-secondary)
+}
+
+html[data-theme-mode=dark] .dark-mode .chat-info-general__section__content {
+  position: relative
+}
+
+html[data-theme-mode=dark] .dark-mode #zadark-popup {
+  border: 1px solid var(--border)
+}
+
+html[data-theme-mode=dark] .dark-mode .videoContainer {
+  background-color: #000 !important
+}
+
+html[data-theme-mode=dark] .dark-mode .videoFloatingContainer__videoBackdrop__videoTimer,
+html[data-theme-mode=dark] .dark-mode .videoContainer__videoBackdrop__videoTimer {
+  color: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .videoFloatingContainer__videoBackdrop__progressContainer,
+html[data-theme-mode=dark] .dark-mode .videoContainer__videoBackdrop__progressContainer {
+  background: rgba(255, 255, 255, .5)
+}
+
+html[data-theme-mode=dark] .dark-mode .videoContainer__volume,
+html[data-theme-mode=dark] .dark-mode .videoFloatingContainer__volume {
+  background: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .videoInlineContainerPopup {
+  height: 32px;
+  background-image: linear-gradient(#000, transparent);
+  color: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .zavatar-admin {
+  background: var(--NG30);
+  color: var(--text-primary)
+}
+
+html[data-theme-mode=dark] .dark-mode .zavatar-admin.zavatar-admin_isOwner {
+  color: var(--Y50)
+}
+
+html[data-theme-mode=dark] .dark-mode .qu-ba {
+  background: #000;
+  color: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .avatar-seen-img {
+  background-color: var(--NG10);
+  color: var(--text-secondary)
+}
+
+html[data-theme-mode=dark] .dark-mode .seen-msg-stt__preview-item.totalMem {
+  padding: 0 8px
+}
+
+html[data-theme-mode=dark] .dark-mode .pi-info-layout__primary-info-container {
+  background-color: var(--bg-default)
+}
+
+html[data-theme-mode=dark] .dark-mode .hover-info-container {
+  color: var(--text-primary);
+  background-color: var(--NG10);
+  border: 1px solid var(--NG30);
+  border-radius: var(--zadark-rounded-base);
+  filter: drop-shadow(var(--BA50) 0 3px 6px);
+  opacity: 1
+}
+
+html[data-theme-mode=dark] .dark-mode .hover-info-container:before {
+  background-color: var(--NG10)
+}
+
+html[data-theme-mode=dark] .dark-mode .bubble-contact-card-container>.button-add-group {
+  margin-top: 4px
+}
+
+html[data-theme-mode=dark] .dark-mode .bubble-contact-card-container>.button-add-group>.button {
+  border-radius: var(--zadark-rounded-base);
+  background-color: var(--button-primary-normal);
+  color: var(--button-primary-text)
+}
+
+html[data-theme-mode=dark] .dark-mode .bubble-contact-card-container>.button-add-group>.button:hover {
+  color: var(--button-primary-text)
+}
+
+html[data-theme-mode=dark] .dark-mode .fss-preview-volume,
+html[data-theme-mode=dark] .dark-mode .seasonal-item-preview>i {
+  color: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .fixed-chat-box-popover {
+  background: var(--layer-background)
+}
+
+html[data-theme-mode=dark] .dark-mode .chat-box-input__img-preview__thumb {
+  overflow: hidden
+}
+
+html[data-theme-mode=dark] .dark-mode .chat-box-input__img-preview__thumb__title {
+  color: var(--text-primary);
+  background-color: var(--BA80)
+}
+
+html[data-theme-mode=dark] .dark-mode .previewItem .close-btn {
+  background: rgba(0, 0, 0, 0)
+}
+
+html[data-theme-mode=dark] .dark-mode .input-preview-item-actions {
+  background: var(--layer-background);
+  outline: 1px solid var(--border)
+}
+
+html[data-theme-mode=dark] .dark-mode .input-preview-area .input-preview-area-header__delete-all {
+  color: var(--text-secondary)
+}
+
+html[data-theme-mode=dark] .dark-mode .zl-modal__dialog {
+  border: 1px solid var(--border) !important
+}
+
+html[data-theme-mode=dark] .dark-mode .z-checkbox.--active.--disabled>i {
+  color: var(--NG40)
+}
+
+html[data-theme-mode=dark] .dark-mode #calendar-v3>.cal-content .cal-item.selected.is-today {
+  color: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .dd-options:hover:not(.prevent-hover) {
+  background: var(--B50-alpha-10)
+}
+
+html[data-theme-mode=dark] .dark-mode .biz-personal-cloud.uncloud__indicator {
+  border: 1px solid var(--white-message-action-border);
+  background: var(--white-message-action);
+  color: var(--text-primary);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .25)
+}
+
+html[data-theme-mode=dark] .dark-mode .cloud-media-item {
+  background-color: var(--NG30) !important
+}
+
+html[data-theme-mode=dark] .dark-mode .cloud-media-item .layer--light:hover {
+  background: var(--N30) !important
+}
+
+html[data-theme-mode=dark] .dark-mode .cloud-media-item .bottom-section .label {
+  color: #fff !important
+}
+
+html[data-theme-mode=dark] .dark-mode .cloud-media-item .bottom-section .info {
+  color: #fff !important
+}
+
+html[data-theme-mode=dark] .dark-mode .file-item:after {
+  background: var(--border)
+}
+
+html[data-theme-mode=dark] .dark-mode .file-item__left .content-label__title {
+  color: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .file-item__left .content-label__info {
+  color: var(--text-secondary);
+  font-weight: 400
+}
+
+html[data-theme-mode=dark] .dark-mode .chat-message__actions {
+  background-color: var(--NG20)
+}
+
+html[data-theme-mode=dark] .dark-mode .zcloud-onboard-content__bottom {
+  color: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .cloud-media-item>.duration__cl__video,
+html[data-theme-mode=dark] .dark-mode .cloud-media-item>.size__cl__photo__video {
+  color: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .cloud-media-item>.icon__cl__video__indicator {
+  color: #fff
+}
+
+html[data-theme-mode=dark] .dark-mode .share-msg__nav__tab-name.selected {
+  color: var(--tab-active)
+}
+
+html[data-theme-mode=dark] .dark-mode .zcloud-tab.chat-message.first-selected,
+html[data-theme-mode=dark] .dark-mode .zcloud-tab.chat-message.last-selected,
+html[data-theme-mode=dark] .dark-mode .zcloud-tab.selected {
+  color: var(--tab-active);
+  border-bottom: 2px solid var(--tab-active)
+}
+
+html[data-theme-mode=dark] .dark-mode .zcloud-promo-content {
+  background: var(--layer-background)
+}
+
+html[data-theme-mode=dark] .dark-mode .zcloud-promo-content__close-btn {
+  color: var(--text-secondary)
+}
+
+html[data-theme-mode=dark] .dark-mode .system-banner__container {
+  border-bottom: 1px solid var(--N30)
+}
+
+html[data-theme-mode=dark] .dark-mode .lb-more-menu .more-pop-item__icon {
+  opacity: 1 !important
+}
+
+html[data-theme-mode=dark] .dark-mode #loading-page {
+  background-color: var(--layer-background) !important;
+  color: var(--text-primary) !important
+}
+
+html[data-theme-mode=dark] .dark-mode .msg-info-popup {
+  background-color: var(--layer-background-subtle)
+}
+
+.zdkf-loading {
+  visibility: hidden
 }
 
 body.dark-mode.dark-mode-web .nav__tabs__zalo,
 body.dark-mode.dark-mode-win32 .nav__tabs__zalo {
   height: auto;
   padding-top: 16px;
+  padding-bottom: 16px
+}
+
+body.dark-mode.dark-mode-darwin .nav__tabs--darwin {
+  padding-top: 0
+}
+
+body.dark-mode.dark-mode-darwin .nav__tabs__zalo {
+  height: auto;
+  padding-top: 40px;
   padding-bottom: 16px
 }
 
@@ -1458,14 +2007,85 @@ body.dark-mode .z-business-label {
   font-size: 10px
 }
 
-body.dark-mode .leftbar-mark-unread {
+body.dark-mode .threadChat__title .z-business-label {
+  background: rgba(0, 0, 0, 0) !important;
+  padding: 0 !important;
+  font-size: 14px !important;
+  color: var(--text-secondary) !important
+}
+
+body.dark-mode .z-noti-badge.--dot.--small {
+  width: 6px;
+  height: 6px
+}
+
+body.dark-mode .z-noti-badge.--dot.--big {
   width: 8px;
-  height: 8px;
-  top: 10px;
-  right: 10px
+  height: 8px
+}
+
+body.dark-mode .leftbar-unread-badge {
+  transition: none
+}
+
+body.dark-mode .leftbar-tab {
+  height: 56px;
+  color: var(--zadark-custom-leftmenu-text)
+}
+
+body.dark-mode .leftbar-tab:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  left: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 8px);
+  border-radius: 8px;
+  opacity: 0;
+  background-color: var(--layer-background-leftmenu-selected)
+}
+
+body.dark-mode .leftbar-tab:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--zadark-custom-leftmenu-text-hover)
+}
+
+body.dark-mode .leftbar-tab:hover:before {
+  opacity: 1
+}
+
+body.dark-mode .leftbar-tab:hover .leftbar-unread-badge {
+  outline-color: var(--layer-background-leftmenu-selected)
+}
+
+body.dark-mode .leftbar-tab.chat-message.first-selected,
+body.dark-mode .leftbar-tab.chat-message.last-selected,
+body.dark-mode .leftbar-tab.selected {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--zadark-custom-leftmenu-text-hover)
+}
+
+body.dark-mode .leftbar-tab.chat-message.first-selected:before,
+body.dark-mode .leftbar-tab.chat-message.last-selected:before,
+body.dark-mode .leftbar-tab.selected:before {
+  opacity: 1
+}
+
+body.dark-mode .leftbar-tab.chat-message.first-selected .leftbar-unread-badge,
+body.dark-mode .leftbar-tab.chat-message.last-selected .leftbar-unread-badge,
+body.dark-mode .leftbar-tab.selected .leftbar-unread-badge {
+  outline-color: var(--layer-background-leftmenu-selected)
 }
 
 body.dark-mode .message-view {
   font-family: "Open Sans", sans-serif;
   letter-spacing: normal
+}
+
+body.dark-mode .message-view__blur__overlay,
+body.dark-mode .message-view__blur__overlay_noavatar {
+  background-image: var(--zadark-thread-chat-bg-url, var(--message-view-gradient));
+  background-size: cover;
+  background-position: center
 }
